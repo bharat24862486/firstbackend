@@ -7,7 +7,11 @@ const app = express()
 
 app.use(express.json())
 
-app.use("/user", userRoute)
+app.get("/",(req,res)=>{
+    res.send("home")
+})
+
+// app.use("/user", userRoute)
 
 
 app.listen(8080,async()=>{
